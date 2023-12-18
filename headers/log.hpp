@@ -9,4 +9,5 @@ private:
 
 public:
     static void Print(int logLevel, std::string message);
+    static void Print(int logLevel, int message);
 };
