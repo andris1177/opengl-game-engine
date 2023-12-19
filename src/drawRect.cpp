@@ -16,13 +16,11 @@ void Engine::DrawRect::shaders()
     glCompileShader(vertexShader);
 
     // Check for shader compilation errors
-    success;
-    infoLog[512];
     glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
     if (!success) 
     {
         glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        std::cerr << "Vertex shader compilation failed:\n" << infoLog << std::endl;
+        Log::Print(2, "Vertex shader compilation failed:" + infoLog)
     }
 
     // Fragment Shader
