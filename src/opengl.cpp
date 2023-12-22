@@ -1,5 +1,4 @@
 #include "../headers/opengl.hpp"
-#include "../headers/log.hpp"
 
 Engine::Opengl::Opengl()
 {

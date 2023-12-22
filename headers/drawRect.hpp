@@ -1,5 +1,11 @@
+// DrawRect.hpp
 #pragma once
+
 #include <GL/glew.h>
+#include "../headers/shaders.hpp"
+#include "../headers/vertex.hpp"
+#include "../headers/log.hpp"
+
 namespace Engine
 {
     class DrawRect
@@ -10,15 +16,8 @@ namespace Engine
         void draw();
 
     private:
-        void shaders();
-        void vertexes();
-
-    private:
-        GLuint vertexShader;
-        GLint success;
-        GLchar infoLog[512];
-        GLuint fragmentShader;
-        GLuint shaderProgram;
         GLuint VAO, VBO, EBO;
+        Shader* shader;
+        Vertex* vertex;
     };
-} 
+}

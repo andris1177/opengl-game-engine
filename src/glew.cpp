@@ -1,6 +1,4 @@
-#include <GL/glew.h>
 #include "../headers/glew.hpp"
-#include "../headers/log.hpp"
 
 Engine::Glew::Glew()
 {

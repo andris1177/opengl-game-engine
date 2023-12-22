@@ -1,5 +1,6 @@
 #pragma once
 #include <GLFW/glfw3.h>
+#include "../headers/log.hpp"
 namespace Engine
 {
     class Window

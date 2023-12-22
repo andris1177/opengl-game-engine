@@ -1,6 +1,4 @@
 #include "../headers/window.hpp"
-#include "../headers/log.hpp"
-#include <GLFW/glfw3.h>
 
 Engine::Window::Window()
 {
