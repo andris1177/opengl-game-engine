@@ -1,4 +1,4 @@
-#pragma oncen
+#pragma once
 #include <GL/glew.h>
 namespace Engine
 {

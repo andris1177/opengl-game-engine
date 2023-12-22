@@ -1,7 +1,5 @@
 #include "../headers/opengl.hpp"
 #include "../headers/log.hpp"
-#include <GLFW/glfw3.h>
-#include <iostream>
 
 Engine::Opengl::Opengl()
 {
