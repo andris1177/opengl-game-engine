@@ -11,7 +11,8 @@ void Engine::Glew::initGlew()
 {
     if (glewInit() != GLEW_OK) 
     {
-        Log::Print(2, "Failed to load glew");
+        const char* errorString = reinterpret_cast<const char*>(glewGetErrorString(glewInit()));
+        Log::Print(2, "Failed to load GLEW: " + std::string(errorString));
     }
 }
 

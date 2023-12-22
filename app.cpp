@@ -6,13 +6,14 @@
 int main()
 {
     Engine::Opengl* opengl = new Engine::Opengl();
-    Engine::Window* window = new Engine::Window();
-    Engine::DrawRect* drawrect = new Engine::DrawRect();
     Engine::Glew* glew = new Engine::Glew();
+    Engine::Window* window = new Engine::Window();
 
     opengl->initOpengl();
-    glew->initGlew();
     window->create_Window(640, 480, "game");
+    glew->initGlew();
+
+    Engine::DrawRect* drawrect = new Engine::DrawRect();
 
     while (!glfwWindowShouldClose(window->window))
     {
@@ -33,5 +34,7 @@ int main()
 
     // delete
     delete opengl;
+    delete glew;
     delete window;
+    delete drawrect;
 }

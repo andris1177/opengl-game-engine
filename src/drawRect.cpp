@@ -20,7 +20,8 @@ void Engine::DrawRect::shaders()
     if (!success) 
     {
         glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        Log::Print(2, "Vertex shader compilation failed:" + infoLog)
+        Log::Print(2, "Vertex shader compilation failed:");
+        Log::Print(2, infoLog);
     }
 
     // Fragment Shader
@@ -33,7 +34,8 @@ void Engine::DrawRect::shaders()
     if (!success) 
     {
         glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-        std::cerr << "Fragment shader compilation failed:\n" << infoLog << std::endl;
+        Log::Print(2, "Fragment shader compilation failed:");
+        Log::Print(2, infoLog);
     }
 
     // Shader Program
@@ -47,7 +49,8 @@ void Engine::DrawRect::shaders()
     if (!success) 
     {
         glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cerr << "Shader program linking failed:\n" << infoLog << std::endl;
+        Log::Print(2, "Shader program linking failed:");
+        Log::Print(2, infoLog);
     }
 
     // Delete the shader objects once linked
@@ -70,7 +73,6 @@ void Engine::DrawRect::vertexes()
         1, 2, 3   // second triangle
     };
 
-    GLuint VAO, VBO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
