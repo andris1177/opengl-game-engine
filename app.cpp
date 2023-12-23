@@ -8,7 +8,7 @@ int main()
     while (!renderer->closeWindow())
     {
         renderer->beginDraw();
-        renderer->setBgColour();
+        renderer->setBgColour(renderer->red);
         rect->draw();
         renderer->endDraw();
     }

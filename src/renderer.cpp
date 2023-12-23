@@ -36,9 +36,10 @@ void Engine::Renderer::endDraw()
     glfwPollEvents();
 }
 
-void Engine::Renderer::setBgColour()
+void Engine::Renderer::setBgColour(const glm::vec4& colour)
 {
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    bgColour = colour;
+    glClearColor(bgColour.r, bgColour.g, bgColour.b, bgColour.a);
 }
 
 Engine::Renderer::~Renderer()
