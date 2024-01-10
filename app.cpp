@@ -14,5 +14,6 @@ int main()
     }
 
     // delete
+    delete rect;
     delete renderer;
 }

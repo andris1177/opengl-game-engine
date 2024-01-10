@@ -29,5 +29,6 @@ void Engine::DrawRect::draw()
 
 Engine::DrawRect::~DrawRect()
 {
-
+    delete shader;
+    delete vertex;
 }

@@ -17,7 +17,6 @@ namespace Engine
         Opengl* opengl;
         Glew* glew;
         Window* window;
-        DrawRect* drawRect;
         int screenWidth;
         int screenHeight;
         int windowText;

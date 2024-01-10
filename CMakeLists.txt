@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Find required packages
 find_package(glfw3 REQUIRED)
 find_package(GLEW REQUIRED)
-find_package(glm REQUIRED)
+#find_package(glm REQUIRED)
 find_package(OpenGL REQUIRED)
 
 
@@ -22,4 +22,4 @@ file(GLOB SRC_FILES "src/*.cpp")
 add_executable(game-engine ${SRC_FILES} app.cpp)
 
 # Link libraries
-target_link_libraries(game-engine glfw GLEW::GLEW glm ${OPENGL_LIBRARIES})
+target_link_libraries(game-engine glfw GLEW::GLEW ${OPENGL_LIBRARIES}) #glm

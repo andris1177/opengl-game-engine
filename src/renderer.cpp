@@ -47,5 +47,4 @@ Engine::Renderer::~Renderer()
     delete opengl;
     delete glew;
     delete window;
-    delete drawRect;
 }
