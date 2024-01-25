@@ -1,6 +1,6 @@
-#include "../headers/log.hpp"
+#include "../../header/log/log.hpp"
 
-void Log::Print(int logLevel, std::string message)
+void Engine::Log::TerminalLog::Print(int logLevel, std::string message)
 {
     if (logLevel == 0)
     {
@@ -18,7 +18,7 @@ void Log::Print(int logLevel, std::string message)
     }
 }
 
-void Log::Print(int logLevel, int message)
+void Engine::Log::TerminalLog::Print(int logLevel, int message)
 {
     if (logLevel == 0)
     {

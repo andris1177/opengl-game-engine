@@ -11,12 +11,11 @@ find_package(GLEW REQUIRED)
 #find_package(glm REQUIRED)
 find_package(OpenGL REQUIRED)
 
-
 # Include directories for header files
-include_directories(headers)
+include_directories(header)
 
 # Get all source files from src directory
-file(GLOB SRC_FILES "src/*.cpp")
+file(GLOB SRC_FILES "src/log/*.cpp" "src/renderer/*.cpp")
 
 # Add executable
 add_executable(game-engine ${SRC_FILES} app.cpp)

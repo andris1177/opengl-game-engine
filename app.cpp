@@ -1,19 +1,16 @@
-#include "../headers/renderer.hpp"
+#include "header/renderer/rendererManager.hpp"
+
 int main()
 {
-    Engine::Renderer *renderer = new Engine::Renderer();
-    renderer->makeWindow(640, 480, "game");
-    Engine::DrawRect * rect = new Engine::DrawRect();
-    
-    while (!renderer->closeWindow())
+    Engine::Renderer::RendererManager *rendermanager = new Engine::Renderer::RendererManager();
+    rendermanager->makeWindow(640, 480, "Engine");
+
+    while (!rendermanager->closeWindow())
     {
-        renderer->beginDraw();
-        renderer->setBgColour(renderer->red);
-        rect->draw();
-        renderer->endDraw();
+        rendermanager->beginDraw();
+        rendermanager->setBgColour(rendermanager->cyan);
+        rendermanager->endDraw();
     }
 
-    // delete
-    delete rect;
-    delete renderer;
+    delete rendermanager;
 }
